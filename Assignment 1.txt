@@ -1,0 +1,689 @@
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+a)date 
+	  1. date +%a  ---> Mon
+	  2.date +%A ----->Monday
+	  3. date +%b-->Sep
+	  4.date +%B-->September
+	  5.date +%d-->07
+	  6.date +%D -->09/07/20
+	  7.date +%F-->2020-09-07
+	  8.date +%y-->20
+	  9.date +%Y-->2020
+	  10.date +%T-->22:07:56
+	  11.date +%d/%B/%Y-->07/September/2020
+	  12.date +%d-%B-%Y-->07-September-2020
+	  13.date +%B%d%Y-->September072020
+	  14.date +%d%B%Y-->07September2020
+	  15.date +%B%d%Y-->September072020
+                   
+ 
+    b)cal --calculater
+	
+	      1.cal  --> Shows current month calendar on the terminal
+	 
+	      2.cal -m jan --> current month given in command
+   
+          3.cal 2022  -->whole year calender
+		  
+		  4.cal -3 --> Shows calendar of previous, current and next month
+		  
+		  5.cal 08 2020 --> Shows calendar of selected month and year
+		  
+	c) bc 
+	
+	  The bc command supports the following features:
+
+      1.Arithmetic operators
+	   
+	     echo "12+5" | bc 
+	  
+     2.Increment or Decrement operators
+	 
+	      echo "var=10;++var" | bc
+	 
+	    
+	 
+     3.Assignment operators
+	 
+	   echo "var=10;var" | bc
+	 
+    4.Comparison or Relational operators
+	
+	    echo "10>5" |bc  -->true returns 1
+		echo "1==2" | bc -->false return 0
+	
+    5.Logical or Boolean operators
+	 
+	  Logical operators are mostly used in conditional statements. 
+	  
+	  The result of the logical operators is either 1(TRUE) or 0(FALSE).
+	  
+	   expr1 && expr2 : Result is 1 if both expressions are non-zero.
+	   
+	     echo "10 && 5 " | bc
+	   
+      expr1 || expr2 : Result is 1 if either expression is non-zero.
+	  
+	     echo "0||0" | bc
+	  
+      !expr : Result is 1 if expr is 0.
+	  
+	    echo "! 0" | bc
+	
+    6.Conditional statements
+	 
+	  echo 'n=8 ; m=10; if(n>m) print "n is greater" else print "m is greater" ' | bc
+	
+	
+    7.Iterative statements
+	
+	   echo "for(i=1; i<=10; i++) {i;}" | bc
+ 
+ 
+ d)echo
+ 
+    echo "hello world"
+	
+	 to display the string 
+	 
+	echo "12+5" | bc 
+ 
+ 
+
+ e) The who command displays the following information for each user currently logged in to the system if no option is provided
+
+    Login name of the users
+    Terminal line numbers
+    Login time of the users in to system
+    Remote host name of the user
+
+  -To display host name and user associated with standard input such as keyboard
+     who -m -H
+	 
+  -To show list of users logged in to system
+     who -u
+	 
+  -To show time of the system when it booted last time
+     who -b -H
+	 
+  - To show system login process details
+     who -l -H
+	 
+  - To show system login process details
+     who -q -H
+	 
+
+
+  f) whoami
+   
+    It displays the username of the current user when this command is invoked.
+	
+
+  g)logname
+     
+	 Print the name of the current user.
+	 
+  h)uname 
+  
+  The command uname displays the information about the system.
+ 
+   uname -n -->host name
+   
+   uname -s -->kernal name
+   
+   uname -r -->kernal realase date 
+   
+   uname -v --> version of kernal
+   
+ i)seq
+ 
+   seq command in Linux is used to generate numbers from FIRST to LAST in steps of INCREMENT
+   
+   seq 10 --> 1 to 10 
+   
+   seq 3 9 --> 3 to 9
+   
+   seq last
+   
+ j)clear 
+ 
+    used to clear the terminal screen.
+1.Date
+ date
+Mon Sep  7 10:03:27 IST 2020
+ date +%a
+Mon
+ date +%A
+Monday
+ date +%b
+Sep
+ date +%B
+Septemberdate +%D
+09/07/20
+ date +%F
+2020-09-07
+ date +%T
+10:06:05
+ date +%y
+20
+date +%Y
+2020
+date +%M
+06
+ date +%m
+09
+date +%B+%d+%y
+September+07+20
+date +%B+%d+%Y
+September+07+2020
+ date +%B-%d-%Y
+September-07-2020
+
+2.cal
+ cal 2020
+                            2020
+      January               February               March
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4                     1   1  2  3  4  5  6  7
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   8  9 10 11 12 13 14
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  15 16 17 18 19 20 21
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  22 23 24 25 26 27 28
+26 27 28 29 30 31     23 24 25 26 27 28 29  29 30 31
+
+
+       April                  May                   June
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4                  1  2      1  2  3  4  5  6
+ 5  6  7  8  9 10 11   3  4  5  6  7  8  9   7  8  9 10 11 12 13
+12 13 14 15 16 17 18  10 11 12 13 14 15 16  14 15 16 17 18 19 20
+19 20 21 22 23 24 25  17 18 19 20 21 22 23  21 22 23 24 25 26 27
+26 27 28 29 30        24 25 26 27 28 29 30  28 29 30
+                      31
+
+        July                 August              September
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+          1  2  3  4                     1         1  2  3  4  5
+ 5  6  7  8  9 10 11   2  3  4  5  6  7  8   6  7  8  9 10 11 12
+12 13 14 15 16 17 18   9 10 11 12 13 14 15  13 14 15 16 17 18 19
+19 20 21 22 23 24 25  16 17 18 19 20 21 22  20 21 22 23 24 25 26
+26 27 28 29 30 31     23 24 25 26 27 28 29  27 28 29 30
+                      30 31
+
+      October               November              December
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+             1  2  3   1  2  3  4  5  6  7         1  2  3  4  5
+ 4  5  6  7  8  9 10   8  9 10 11 12 13 14   6  7  8  9 10 11 12
+11 12 13 14 15 16 17  15 16 17 18 19 20 21  13 14 15 16 17 18 19
+18 19 20 21 22 23 24  22 23 24 25 26 27 28  20 21 22 23 24 25 26
+25 26 27 28 29 30 31  29 30                 27 28 29 30 31
+
+
+ cal -m march
+     March 2020
+Su Mo Tu We Th Fr Sa
+ 1  2  3  4  5  6  7
+ 8  9 10 11 12 13 14
+15 16 17 18 19 20 21
+22 23 24 25 26 27 28
+29 30 31
+
+
+-----------------------------------------
+3.BC
+
+ echo "20+40" | bc
+60
+echo "10>5" | bc
+1
+echo "1==1" | bc
+1
+ echo "1==10" | bc
+0
+
+----------------------------------
+4.echo
+
+ echo "Hello Akshay"
+Hello Akshay
+echo $var=10
+=10
+echo $var10
+
+ echo $var 10
+10
+ echo $var {10,20,30}
+----------------------------------
+who 
+akshay@DESKTOP-7451H1I:~$ who
+akshay@DESKTOP-7451H1I:~$ whoami
+akshay
+akshay@DESKTOP-7451H1I:~$ who -H
+NAME     LINE         TIME             COMMENT
+akshay@DESKTOP-7451H1I:~$ who -q
+
+# users=0
+---------------------------------------------------
+*uname
+
+akshay@DESKTOP-7451H1I:~$ uname -a
+Linux DESKTOP-7451H1I 4.4.0-19041-Microsoft #1-Microsoft Fri Dec 06 14:06:00 PST 2019 x86_64 x86_64 x86_64 GNU/Linux
+akshay@DESKTOP-7451H1I:~$ uname -s
+Linux
+akshay@DESKTOP-7451H1I:~$ uname -v
+#1-Microsoft Fri Dec 06 14:06:00 PST 2019
+akshay@DESKTOP-7451H1I:~$ uname -r
+4.4.0-19041-Microsoft
+-----------------------------------------
+logname
+akshay@DESKTOP-7451H1I:~$ logname
+logname: no login name
+----------------------------------------
+*seq
+akshay@DESKTOP-7451H1I:~$ seq  10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+akshay@DESKTOP-7451H1I:~$ seq  5 10
+5
+6
+7
+8
+9
+10
+akshay@DESKTOP-7451H1I:~$ seq  10 15 20
+10
+akshay@DESKTOP-7451H1I:~$ seq  10 20
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+akshay@DESKTOP-7451H1I:~$
+
+-------------------------
+clear
+akshay@DESKTOP-7451H1I:~$clear
+------------------------------------------------------------------------------------------------------------
+Question no.2:
+	A) Create three directory a b and c and create a.txt,b.txt and c.txtin each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac
+A.
+akshay@DESKTOP-7451H1I:~$ mkdir a b c
+akshay@DESKTOP-7451H1I:~$ cd a
+akshay@DESKTOP-7451H1I:~/a$ touch a.txt
+akshay@DESKTOP-7451H1I:~/a$ cd
+akshay@DESKTOP-7451H1I:~$ cd b
+akshay@DESKTOP-7451H1I:~/b$ touch b.txt
+akshay@DESKTOP-7451H1I:~/b$ cd
+akshay@DESKTOP-7451H1I:~$ cd c
+akshay@DESKTOP-7451H1I:~/c$ touch c.txt
+akshay@DESKTOP-7451H1I:~/c$ cd
+akshay@DESKTOP-7451H1I:~$ cp -r c a
+akshay@DESKTOP-7451H1I:~$ cd a
+akshay@DESKTOP-7451H1I:~/a$ ls
+a.txt  c
+akshay@DESKTOP-7451H1I:~/a$
+----------------------------------------
+B.
+akshay@DESKTOP-7451H1I:~/a$ cd
+akshay@DESKTOP-7451H1I:~$ mv b c
+akshay@DESKTOP-7451H1I:~$ cd c
+akshay@DESKTOP-7451H1I:~/c$ ls
+b  c.txt
+akshay@DESKTOP-7451H1I:~/c$
+------------------------------------------
+C.
+akshay@DESKTOP-7451H1I:~/c$ ls -al
+total 0
+drwxr-xr-x 1 akshay akshay 4096 Sep  7 11:02 .
+drwxr-xr-x 1 akshay akshay 4096 Sep  7 11:02 ..
+drwxr-xr-x 1 akshay akshay 4096 Sep  7 10:58 b
+-rw-r--r-- 1 akshay akshay    0 Sep  7 10:59 c.txt
+akshay@DESKTOP-7451H1I:~/c$ alias akshay="ls -al"
+akshay@DESKTOP-7451H1I:~/c$ ls -al
+total 0
+drwxr-xr-x 1 akshay akshay 4096 Sep  7 11:02 .
+drwxr-xr-x 1 akshay akshay 4096 Sep  7 11:02 ..
+drwxr-xr-x 1 akshay akshay 4096 Sep  7 10:58 b
+-rw-r--r-- 1 akshay akshay    0 Sep  7 10:59 c.txt
+akshay@DESKTOP-7451H1I:~/c$
+------------------------------------------------------------
+D.
+akshay@DESKTOP-7451H1I:~/c$ mkdir SabaleAkshay
+akshay@DESKTOP-7451H1I:~/c$ ls
+SabaleAkshay  b  c.txt
+akshay@DESKTOP-7451H1I:~/c$ mv SabaleAkshay Akshay
+akshay@DESKTOP-7451H1I:~/c$ ls
+Akshay  b  c.txt
+akshay@DESKTOP-7451H1I:~/c$
+---------------------------------------------------------------
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	
+
+akshay@DESKTOP-7451H1I:~/ak$ cat >file1.txt
+akshay S
+akshay@DESKTOP-7451H1I:~/ak$ cat >file2.txt
+Sabaleakshay@DESKTOP-7451H1I:~/ak$
+akshay@DESKTOP-7451H1I:~/ak$ cat >file3.txt
+Satara
+akshay@DESKTOP-7451H1I:~/ak$ cat >file4.txt
+Shivthar
+akshay@DESKTOP-7451H1I:~/ak$ cat >file5.txt
+Maharashtra
+S
+akshay@DESKTOP-7451H1I:~/ak$
+file5.txt:Maharashtra
+akshay@DESKTOP-7451H1I:~/ak$ grep 's' file1.txt file2.txt file3.txt file4.txt file5.txt
+file1.txt:akshay S
+file5.txt:Maharashtra
+-----------------------------------
+B)Create file.txt using cat and edit that using nano editor.
+ nano file.txt
+------------------------------------------------------------
+c)Create 5 empty files using touch command
+akshay@DESKTOP-7451H1I:~/ak$ touch 1.txt 2.txt 3.txt 4.txt 5.txt
+akshay@DESKTOP-7451H1I:~/ak$ ls
+1.txt  2.txt  3.txt  4.txt  5.txt  file1.txt  file2.txt  file3.txt  file4.txt  file5.txt
+akshay@DESKTOP-7451H1I:~/ak$
+--------------------------------------------------------------------
+D)Remove previously created directory a , b and c.
+akshay@DESKTOP-7451H1I:~/ak$rm -rf a b c
+--------------------------------------------------------------------
+4.	Create a file with some content using vi editor
+
+a) Display the file using cat command
+vi akshay.txt
+ cat akshay.txt
+
+b) Display line numbers along with content
+cat -n akshay.txt
+
+c) Display the file in reverse order using tac
+tac akshay.txt
+
+d) Combine multiple files using cat command
+cat akshay.txt >> sabale.txt
+cat sabale.txt
+------------------------------------------------------------------------
+
+Q5. Create Random some files and sub directories.
+	
+	
+	
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+a) display files row wise, column wise, 1 per row
+akshay@DESKTOP-7451H1I:~$ cat >my.txt
+hello how are you
+welome to cdac
+
+bye
+akshay@DESKTOP-7451H1I:~$ column my.txt
+hello how are you       welome to cdac          bye
+
+b) sort the files in ascending, descending order
+sort file.txt
+
+c) Create some hidden files and sub directories and display them using “ls -a”
+
+
+a) display files row wise, column wise, 1 per row
+
+	> ls -1
+	> ls
+
+	b) sort the files in ascending, descending order
+
+	> ls -1   (sort by name asc)
+	> ls -1 -r (sort by name desc)
+	> ls -al -S (sort by size desc)
+	> ls -al -Sr <sort by size asc)
+
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	
+	> touch .adi.txt
+	> ls -a
+
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	
+	> touch -t file2.txt
+
+	e) Recursive display contents of your home directory.
+
+	> ls -R
+
+	f) display all attributes of files and directories using ls -l
+
+	> ls -l
+
+	g) display attributes of a directory using ls -ld
+	
+	> ls -ld
+
+==================================================================================
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+
+		> chmod a-rwx a.txt b.txt
+
+		a)user can read and write the file a.txt and b.txt
+
+		> chmod u+rw a.txt b.txt
+
+		b)user can write the file c.txt
+
+		> chmod u+w c.txt
+
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+		> chmod u+x d.sh
+		> vi d.sh
+		> bash d.sh
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+> chmod a+x ../
+
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+
+> chmod a+r ../
+
+Q4. Use echo to list the all files of your home directory.
+
+> echo *
+
+Q5. Use echo to list the all files of /etc/ directory
+
+> echo */*
+
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+
+> echo *.conf
+
+Q7. Use echo to append your name to a.txt
+
+> echo "Adinath" >> data.txt
+
+==================================================================================
+
+Note:Many operation might not work.Analyze them
+1.	Create Three level nested directory a,b and c
+a)Create at least one hidden file in each directory
+
+> mkdir -p a/b/c
+
+b)Create at least one normal text file in each directory
+
+> touch filea.txt ./b/fileb.txt ./b/c/filec.txt
+
+c)Copy c into a
+
+> cp -r b/c ./
+
+d)Copy file inside a into b
+
+> cp filea.txt b/
+
+2.	Change the third level directory c permission to read only
+
+	> chmod a+r b/c
+ 
+3.	Try copying third level c directory to outside of a
+
+	> cp b/c ../
+
+4.	Create the directory  “data“ inside b
+
+	> mkdir b/data
+
+5.	Change the permission of b to read and write only
+
+	> chmod u+rw b
+
+6.	Create directory “data2”  inside b
+
+	> mkdir b/data2
+
+7.	Create data.txt file inside b
+	
+	> touch b/data.txt
+
+8.	Rename the second level directory c to copied_dir
+
+	> mv b/c a
+
+9.	Change permission of copied_dir to only executable
+
+	> chmod u+x b/c
+
+10.	Try ls on copied_dir
+
+	> ls cannot run because of executable only cannot read
+
+11.	Try moving copied_dir to outside of a
+
+	> cannot move dir to outside because of restriced permissions
+
+12.	Try moving data directory outside of a
+
+	> cannot move, permission access denied
+
+13.	Now change the owner of the directory a to root
+
+	> groups username
+	
+	chgrp webdev file.txt
+
+	ls -l file.txt
+
+14.	Change permission of a to read write and executable to only user
+
+	> chmod u+rwx a
+
+15.	Try creating directory sample inside a
+
+	> mkdir a/d
+
+16.	Create directory x outside a
+
+	> mkdir ../x
+
+17.	Try moving x inside a
+
+	> mv x ./a
+
+18.	Create directory movies
+
+	> mkdir movies
+
+19.	Change group of movies to sudo
+
+	> sudo usermod -aG sudo newuser
+
+
+20.	Change group of movies to avahi
+
+	> chgrp scifi myfile
+	
+	  ls -l myfile
+ 
+21.	Try changing permission after changing ownership to root
+
+	> sudo chmod --recursive a+rwx /tmp
+
+
+22.	Try Changing permission after changing group to sudo without sudo
+
+	> pkexec chmod go-w /usr/lib/sudo/sudoers.so
+
+
+23.	Try Changing owner and group both to root
+
+	> sudo chown -R username:group directory
+
+
+24.	Try changinging permission
+
+	> sudo usermod -aG sudo newuser
+
+25.	Try deleting the file
+
+	> rm -rf a.txt
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
